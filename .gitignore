@@ -1,0 +1,11 @@
+# Don't commit data/models
+**/tub_*/
+**/models/*
+!.keep
+# Python cruft
+__pycache__/
+*.pyc
+.venv/
+# OS
+.DS_Store
+Thumbs.db

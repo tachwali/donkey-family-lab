@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  train:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.gpu
+    container_name: donkey-train
+    tty: true
+    stdin_open: true
+    gpus: all
+    working_dir: /workspace/projects
+    volumes:
+      - ./projects:/workspace/projects
+      - ./data:/workspace/data
